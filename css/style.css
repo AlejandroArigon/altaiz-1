@@ -1,0 +1,224 @@
+:root{
+    --green-light: #04BF7B;
+    --green-normal: #038C5A;
+    --green-dark: #0B593C;
+    --black: #0D0D0D;
+    --white: #F2F2F2;
+    --background:  rgb(197, 220, 142) ;
+    --orange-light: #F5C951;
+    --orange-dark: #DE7B54;
+    /* font-family: 'Roboto', sans-serif; 300 400 700*/
+    /* font-family: 'Rubik', sans-serif; 300 400 500 700 */
+    /* font-family: 'Roboto Mono', monospace; */
+}
+body{
+    background-color: var(--background);   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* {
+    margin:0px;
+    padding:0px;
+}
+a{
+  text-decoration: none;
+  color: var(--white);
+}
+a:hover{
+  color: #bbb;
+}
+ul{
+    list-style: none;
+}
+/* header */
+.logo img{
+    width: 300px;
+}
+.nav-bar{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    background-color: var(--black);
+}
+.nav-bar li{
+    margin: 10px;
+}
+svg{
+    fill: var(--white);
+}
+hr{
+    border: none;
+    height: 0.5px;
+    background-color: #bbb;
+}
+/* footer */
+footer{
+    background-color: var(--black);
+    font-family: 'Roboto', sans-serif;
+}
+footer:hover{
+    color: #bbb;
+}
+footer ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redes svg{
+    width: 40px;
+    margin: 5px;
+    fill: #bbb;
+}
+.redes-fb svg:hover{
+    fill: #4267B2;
+    background-color: var(--white);
+    border-radius: 50%;
+    padding: 20px;
+  }
+  .redes-tw svg:hover{
+    fill: #00acee;
+    background-color: var(--white);
+    border-radius: 50%;
+  }
+  .redes-ig svg:hover{
+    fill: #d62976;
+    background-color: var(--white);
+    border-radius: 50%;
+  }
+  .redes-wp svg:hover{
+    fill: #25D366;
+  }
+/* footer fin */
+
+/* img-txt */
+.img-txt-img img{
+    width: 100vw;
+    height: 25vh;
+}
+.img-txt-txt{
+    font-family: 'Roboto Mono', monospace;
+    font-style: italic;
+    margin: 20px;
+    display: flex;  
+    align-items: center;
+}
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* esconder imagenes */
+  .mySlides {
+    display: none;
+  }
+  
+  /* boton siguiente y anterior */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Posision boton siguiente a la derecha*/
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* animacion desvanecimiento */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+/* Productos */
+.camisetas-individual{
+    display: flex;
+}
+.camisetas-img img{
+    width: 50vw;
+}
+.camisetas-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    font-weight: bold;
+}
+/* Productos fin */
+
+@media screen and (min-width:700px){
+    .nav-bar ul{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .logo{
+        float: left;
+    }
+    .li-header{
+        padding-top: 20px;
+    }
+    .img-txt{
+        display: flex;
+    }
+    .img-txt-rev{
+    flex-direction: row-reverse;
+    }
+    .img-txt-img img{
+        width: 50vw;
+        height: 40vh;
+    }
+}
+@media screen and (max-width:700px) {
+    .nav-bar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+    footer ul{
+      display: none;
+    }
+}
